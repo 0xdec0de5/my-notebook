@@ -33,7 +33,6 @@ jobs:
         with:
           input_files: '[["*.md"]]'
           output_files: '["_site/index.html"]'
-          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
       - name: upload
