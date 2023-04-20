@@ -6,4 +6,5 @@ Edit Notes Online (needs auth), [https://github.dev/0xdec0de5/my-notebook/blob/m
 
 #### Packaging
 
-Creating pypi packages, [https://packaging.python.org/en/latest/](https://packaging.python.org/en/latest/)
+My PyPi account, [https://pypi.org/manage/projects/](https://pypi.org/manage/projects/)
+Creating PyPi packages, [https://packaging.python.org/en/latest/](https://packaging.python.org/en/latest/)
