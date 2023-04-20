@@ -1,0 +1,44 @@
+name: Validate WorkItem referenced in pull
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  REPO: https://github.com/trentmillar/my-notebook
+  URL: https://bookish-bassoon-fee4addd.pages.github.io/
+
+jobs:
+  md-to-html:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: generate
+        uses: ZacJW/markdown-html-action@1.1.0
+        with:
+          input_files: '[["*.md"]]'
+          output_files: '["_site/index.html"]'
+          builtin_stylesheet: 'style.css'
+          packages: 'pymdown-extensions'
+          extensions: '["pymdownx.extra"]'
+      - name: upload
+        uses: actions/upload-pages-artifact@v1
+      - name: deploy
+        id: deployment
+        uses: actions/deploy-pages@v2
+        
