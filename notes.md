@@ -1,7 +1,9 @@
 # My Notes
 
+Edit Notes Online (needs auth), https://github.dev/0xdec0de5/my-notebook/blob/main/notes.md
+
 ### Python
 
 #### Packaging
 
-[Creating packages](https://packaging.python.org/en/latest/)
+Creating pypi packages, https://packaging.python.org/en/latest/
