@@ -18,7 +18,7 @@ __Classes__
 
 Instance vs. Class/Static vars, [https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables](https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables)
 
-```
+```python
 class Dog:
 
     kind = 'canine'         # class variable shared by all instances
