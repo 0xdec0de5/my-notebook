@@ -1,4 +1,4 @@
-# My Notes
+# My Tech Notes
 
 Edit Notes Online (needs auth), [https://github.dev/0xdec0de5/my-notebook/blob/main/notes.md](https://github.dev/0xdec0de5/my-notebook/blob/main/notes.md)
 

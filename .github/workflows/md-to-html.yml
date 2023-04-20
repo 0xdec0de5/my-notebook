@@ -33,8 +33,8 @@ jobs:
       - name: generate
         uses: ZacJW/markdown-html-action@1.1.0
         with:
-          input_files: '[["*.md"]]'
-          output_files: '["_site/index.html"]'
+          input_files: '[["notes.md"], ["personal.md"]]'
+          output_files: '["_site/index.html", "_site/index2.html"]'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
       - name: upload
