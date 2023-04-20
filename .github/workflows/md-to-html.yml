@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+      - name: mkdir
+        run: mkdir _site
       - name: generate
         uses: ZacJW/markdown-html-action@1.1.0
         with:
