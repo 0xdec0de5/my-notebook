@@ -27,3 +27,32 @@ class Dog:
         self.name = name    # instance variable unique to each instance
 
 ```
+
+__Unit Tests__
+
+example of lifecycle in a Test class
+
+```python
+import unittest
+
+class MyTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        pass  # very first to run - static
+
+    @classmethod
+    def tearDownClass(cls):
+        pass  # very last to run - static
+
+    def setUp(self):
+        pass  # runs in front of every test fn
+
+    def tearDown(self):
+        pass  # runs after every test fn
+
+    def test_a_test(self):
+        # setUp runs
+        self.assertTrue(True)
+        # tearDown runs
+
+```
