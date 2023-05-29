@@ -1,6 +1,32 @@
 # My Tech Notes
 
+View These Notes as HTML, [https://0xdec0de5.github.io/my-notebook/](https://0xdec0de5.github.io/my-notebook/)
 Edit Notes Online (needs auth), [https://github.dev/0xdec0de5/my-notebook/blob/main/notes.md](https://github.dev/0xdec0de5/my-notebook/blob/main/notes.md)
+
+### OpenAI
+
+#### Completion
+
+##### create
+
+```python
+openai.ChatCompletion.create(
+            model="gpt35turbo",  # explain_model,
+            engine="gpt35turbo",
+            messages=explain_messages,
+            temperature=temperature,
+            stream=True,
+        )
+```
+
+###### model
+
+Get the Model ID's 
+
+```bash
+curl https://api.openai.com/v1/models \
+  -H "Authorization: Bearer $OPENAI_API_KEY"
+```
 
 ### Python
 
