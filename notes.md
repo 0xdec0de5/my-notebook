@@ -141,3 +141,14 @@ A scope to store secrets is needed
 databricks secrets create-scope --scope test
 ```
 
+View acl for user
+
+```bash
+databricks secrets get-acl --scope test --principal trent@example.com
+```
+
+Add secret
+
+```bash
+databricks secrets put --scope test --key mongodb-connection-string --string-value mongo://...
+```
