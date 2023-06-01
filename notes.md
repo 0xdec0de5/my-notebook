@@ -82,3 +82,53 @@ class MyTest(unittest.TestCase):
         # tearDown runs
 
 ```
+
+### Databricks (Azure)
+
+#### Set secrets using CLI
+
+##### Install the CLI
+https://learn.microsoft.com/en-us/azure/databricks/dev-tools/cli/
+
+```bash
+pip install databricks-cli
+```
+
+##### Get Access Token for auth
+
+```bash
+az login
+az account set -s <SUB_ID>
+token_response=$(az account get-access-token)
+export DATABRICKS_AAD_TOKEN=$(jq .accessToken -r <<< "$token_response")
+databricks configure --aad-token
+```
+
+When prompted put the Databricks hostname
+
+```
+https://adb-<workspace-id>.<random-number>.azuredatabricks.net
+```
+
+**OR USE A PAT**
+
+Generate a PAT in Databricks,
+
+```bash
+databricks configure --token
+> Paste the hostname
+> Paste the token
+```
+
+_Verify you are good by checking ~/.databrickscfg_
+
+```bash
+cat ~/.databrickscfg
+```
+
+```
+[DEFAULT]
+host = https://<workspace-id>.5.azuredatabricks.net
+token = <TOKEN>
+jobs-api-version = 2.0
+```
