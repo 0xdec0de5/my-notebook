@@ -132,3 +132,12 @@ host = https://<workspace-id>.5.azuredatabricks.net
 token = <TOKEN>
 jobs-api-version = 2.0
 ```
+
+##### Create Secrets
+
+A scope to store secrets is needed
+
+```bash
+databricks secrets create-scope --scope test
+```
+
